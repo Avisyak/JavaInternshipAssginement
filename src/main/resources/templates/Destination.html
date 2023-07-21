@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="mb-5" th:insert="Header2.html"></div>
+<div class="container-xxl py-5 ">
+    <div th:each="d: ${dlist}" class="col-md-6 mt-3">
+  <div class="card">
+
+  <div class="card crd-ho">
+  
+     <div class="card-body text-center">
+          
+            
+            <p><img alt="" th:src="@{'/image/'+${d.photo}}" style="width:150px;height:200px;" class="img-thumblin"></p>
+            <h3>[[${d.name}]]</h3>
+            <p><i class="fa-solid fa-location-dot"></i> [[${d.location}]]</p>
+            <p>[[${d.details}]]</p>
+           
+   </div>
+   </div>
+  </div>
+ </div>
+</div>
+</body>
+</html>

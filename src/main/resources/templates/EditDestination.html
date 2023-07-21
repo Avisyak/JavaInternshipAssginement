@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Edit Profile</title>
+
+</head>
+<body>
+<!--  insert header properties -->
+ <div class="mb-3" th:insert="Header2.html"></div>
+ 
+<div class="container-xxl py-5 ">
+		<div class="card ">
+			<div class="card-header bg-secondary text-white text-center">
+				<h4>EditProfile</h4>
+				<!-- <p style="color:green">[[${updatemsg}]]</p> -->
+
+			</div>
+			<form action="/updatedestination" method="post" th:object="${destinationmodel}" >
+				<div class="card-body">
+					<div class="row m-2">
+						<div class="col-4">Destination Name</div>
+						<div class="col-6">
+							<input type="text" th:field="*{name}"class="form-control">
+						</div>
+					</div>
+					<div class="row m-2">
+						<div class="col-4">Location</div>
+						<div class="col-6">
+							<input type="text" th:field="*{location}"class="form-control">
+						</div>
+					</div>
+					
+
+					<div class="row m-2">
+						<div class="col-4">Details</div>
+						<div class="col-6">
+							<input type="text" th:field="*{details}" class="form-control">
+						</div>
+					<div class="row m-2">
+						<div class="col-4"> Photo</div>
+						<div class="col-6">
+							<input type="file" th:field="*{photo}" class="form-control">
+						</div>
+					</div>
+				
+					    	
+					<div class="row m-2">
+						<div class="col-4"></div>
+						<div class="col-6">
+							<input type="submit" value="Update" class="btn btn-success">
+						</div>
+					</div>
+
+				</div>
+				<input type="hidden" th:field="*{id}">
+			</form>
+		</div>
+
+	</div>
+
+</body>
+</html>

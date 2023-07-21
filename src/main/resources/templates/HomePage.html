@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>YourTravelPartner</title>
+</head>
+<body>
+<!--  insert header properties -->
+ <div class="mb-5" th:insert="Header.html"></div>
+ 
+  <!-- destination section -->
+        <div class="container-xxl py-5 destination">
+            <div class="container">
+                <div class="text-center">
+                    <h4 class="section-title bg-white text-center text-success px-3 ">
+                        Destination
+                    </h4>
+                    <h1 class="mb-5">Popular Destination</h1>
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-7 col-md-6">
+                        <div class="row g-3">
+
+                            <div class="col-lg-12 col-md-12">
+                                <a href="" class="d-block position-relative overflow-hidden">
+                                    <img src="Image/destination-1.jpg" alt="" class="img-fluid">
+                                    <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">30% Off</div>
+                                    <div class="bg-white fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2 ">MardiHimal</div>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                                <a href="" class="d-block position-relative overflow-hidden">
+                                    <img src="Image/destination-2.jpg" alt="" class="img-fluid">
+                                    <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">50% Off</div>
+                                    <div class="bg-white fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2 ">Kathmandu</div>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                                <a href="" class="d-block position-relative overflow-hidden">
+                                    <img src="Image/destination-3.jpg" alt="" class="img-fluid">
+                                    <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">20% Off</div>
+                                    <div class="bg-white fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2 ">Everest</div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-6" style="min-height: 350px;">
+                    <a href="" class="d-block position-relative h-100 overflow-hidden ">
+                        <img src="Image/destination-4.jpg" alt="" class="img-fluid position-absolute w-100 h-100" style="object-fit: cover;">
+                        <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">25% Off</div>
+                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2 "> Pokhara</div>
+                    </a>
+                    </div>
+                </div>
+                <div class="col-md-4 p-5 m-auto">
+                  <a href="/destination"> <button class="btn btn-success text-center py-3" type="submit" >Load More</button></a> 
+                </div>
+            </div>
+        </div>
+        
+      <!-- =================Booking Section================= -->
+        <div class="container-xxl py-5"> 
+            <div class="container">
+                <div class="booking p-5">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-md-6 text-white">
+                            <h6 class="text-white text-uppercase">Booking</h6>
+                            <h1 class="text-white mb-4">Online Booking</h1>
+                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, vitae. Quia possimus magni, dolorum laborum consectetur expedita maiores.</p>
+                            <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam obcaecati molestiae culpa nostrum dignissimos ratione laudantium natus eius enim aspernatur.</p>
+                            <a href="" class="btn btn-outline-light py-3 px-5 mt-2">Read More</a>
+
+                        </div>
+                        <div class="col-md-6">
+                            <h1 class="text-white mb-4">
+                                Book A Tour
+                            </h1>
+                            <form action="/book" method="post">
+                                <div class="row g-3">
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" name="name" class="form-control bg-transparent " id="name" placeholder="Your Name">
+                                            <label for="name">Your name</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" name="email" class="form-control bg-transparent " id="name" placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating" id="date3">
+                                            <input type="date" name="date" class="form-control bg-transparent " id="datetime" >
+                                            <label for="datetime">Date & Time</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- ====selectbox=== -->
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select name="destination" id="select1" class="form-select bg-transparent">
+                                                <option value="1">Destination 1</option>
+                                                <option value="2">Destination 2</option>
+                                                <option value="3">Destination 3</option>
+                                                
+                                            </select>
+                                            <label for="select1">Destination</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea name="request" class="form-control bg-transparent" placeholder="Special Request" id="message" style="height: 100px;"></textarea>
+                                            <label for="message">Special Request</label>
+                                        </div>
+                                    </div>
+                                    <!-- ====button==== -->
+                                    <div class="col-12">
+                                        <button class="btn btn-outline-light w-100 py-3" type="submit" >Book Now</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+
+</body>
+</html>

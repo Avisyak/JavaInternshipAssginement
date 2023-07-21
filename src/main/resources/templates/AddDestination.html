@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Destination</title>
+</head>
+<body>
+  <div class="mb-5" th:insert="Header2.html"></div>
+	<div class="container-xxl py-5">
+		<div class="card">
+			<div class="card-header bg-secondary text-white text-center">
+				<h4>Add Destination Information</h4>
+                 <p style="color:skyblue">[[${message}]]</p>
+			</div>
+			<form action="/adddestination" method="post" enctype="multipart/form-data" >
+				<div class="card-body">
+					<div class="row m-2">
+						<div class="col-4">Destination Name</div>
+						<div class="col-6">
+							<input type="text" name="name" class="form-control">
+						</div>
+					</div>
+					<div class="row m-2">
+						<div class="col-4">Destination Location</div>
+						<div class="col-6">
+							<input type="text" name="location" class="form-control">
+						</div>
+					</div>
+				
+					
+					<div class="row m-2">
+						<div class="col-4">Upload Photo</div>
+						<div class="col-6">
+							<input type="file" name="image" class="form-control">
+						</div>
+					</div>
+					
+					<div class="row m-2">
+						<div class="col-4">Destination Details</div>
+						<div class="col-6">
+							<input type="text" name="details" class="form-control">
+						</div>
+					</div>
+				
+					    	
+					<div class="row m-2">
+						<div class="col-4"></div>
+						<div class="col-6">
+							<input type="submit" value="Add" class="btn btn-success">
+						</div>
+					</div>
+
+				</div>
+			</form>
+		</div>
+
+	</div>
+
+</body>
+</html>

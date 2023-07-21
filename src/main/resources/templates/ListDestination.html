@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>List Destination</title>
+</head>
+<body>
+<div class="mb-5" th:insert="Header2.html"></div>
+<div class="container-xxl py-5">
+		<div class="card">
+			<div class="card-header bg-secondary text-white text-center">
+				<h4>List Of Destinations</h4>
+			</div>
+			<div class="card-body">
+			<table class="table table-striped table-hover">
+			     <thead>
+			        <tr>
+			           <td>Id</td>
+			           <td>Image</td>
+			           <td>Destination name</td>
+			           <td> location</td> 
+			           <td>Details</td>
+			          
+			           <td>Action</td>
+			           
+			           
+			         </tr>  
+			     
+			     </thead>
+			     <tbody>
+			     <tr th:each ="d: ${dlist}">
+			           <td>[[${d.id}]]</td>
+			           <td>
+                    <img th:src="@{/image/__${d.photo}__}" alt="Book Image" width="80px;" height="80px;"/>
+                       </td> 
+			           <td>[[${d.name}]]</td>  
+			           <td>[[${d.location}]]</td>  
+			           <td>[[${d.details}]]</td>
+			          
+			           
+			           <td>
+			            <a th:href="@{/editdestination(id=${d.id})}">  <button type="submit" class="btn btn-success btn-md btn-block mb-1"><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+			            </a>
+			             <a th:href="@{/deletedestination(id=${d.id})}"> <button type="submit" class="btn btn-danger btn-md btn-block"><i class="fa-solid fa-trash"></i> delete</button>
+			              </a>
+			           </td>
+			           
+			         </tr>
+			          
+			     </tbody>
+			
+			</table> 
+			
+			
+			
+			</div>
+
+			
+		</div>
+
+	</div>
+</body>
+</html>
